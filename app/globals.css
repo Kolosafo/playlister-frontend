@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+nav {
+  @apply flex h-[80px] w-full  items-center justify-center max-md:justify-start bg-gradient-to-r from-[#93dc99] to-[#46c38f] px-4 max-md:h-[60px]
+}
+nav > div {
+  @apply flex w-[70%] items-center justify-between max-md:w-[90%]
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+/* Footer Styles */
+.footer {
+ @apply  w-full h-[autp] mt-10  flex flex-col justify-center items-center  border bg-slate-100 border-gray-200 pt-4    
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.footer div {
+  @apply flex w-[60%] justify-between p-5 items-center max-lg:flex-col  max-lg:space-y-6
+}
+
+.footer hr {
+  @apply m-6  w-[80%] border border-ACT
+}
+.footer small{
+  @apply w-full py-6 text-center text-lg
 }
